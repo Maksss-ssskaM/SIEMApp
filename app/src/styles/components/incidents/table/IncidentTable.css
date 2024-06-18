@@ -1,0 +1,55 @@
+.incidents-table {
+  position: relative;
+  border-collapse: collapse;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  overflow: hidden;
+  table-layout: fixed;
+}
+.incidents-table__message {
+  color: #666;
+}
+.incidents-table thead th {
+  background-color: #e58225;
+  color: white;
+  padding: 10px;
+  text-align: left;
+  font-size: 16px;
+}
+.incidents-table thead th:nth-child(1) {
+  width: 30%;
+}
+.incidents-table thead th:nth-child(2) {
+  width: 10%;
+}
+.incidents-table thead th:nth-child(3) {
+  width: 20%;
+}
+.incidents-table thead th:nth-child(4) {
+  width: 15%;
+}
+.incidents-table thead th:nth-child(5) {
+  width: 10%;
+}
+.incidents-table thead th:nth-child(6) {
+  width: 15%;
+}
+.incidents-table tbody tr {
+  cursor: pointer;
+  background-color: white;
+  transition: background-color 0.2s ease-in-out;
+}
+.incidents-table tbody tr:hover {
+  background-color: #f2f2f2;
+}
+.incidents-table tbody td {
+  padding: 15px;
+  border-bottom: 1px solid #ddd;
+  text-align: left;
+  font-size: 16px;
+}
+.incidents-table tbody td:last-child {
+  text-align: center;
+}
+
+/*# sourceMappingURL=IncidentTable.css.map */

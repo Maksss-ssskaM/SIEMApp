@@ -1,0 +1,52 @@
+@import '../variables';
+
+.account-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 80vh;
+  gap: 30px;
+
+  &__info {
+    width: 400px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+    &-title {
+      text-align: center;
+      font-size: 1.5em;
+      margin-bottom: 20px;
+    }
+
+    &-detail {
+      margin-bottom: 10px;
+      line-height: 1.6;
+
+      span {
+        font-weight: bold;
+      }
+    }
+  }
+
+  &__logout-button {
+    display: block;
+    margin-top: 20px;
+    padding: 10px 15px;
+    width: 100%;
+    background-color: $primary-color;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+
+    &:hover,
+    &:focus {
+      background-color: darken($primary-color, 5%);
+    }
+  }
+}

@@ -1,0 +1,53 @@
+@import '../../variables';
+
+.incident-search-block{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  background-color: white;
+  border-radius: 15px;
+  padding: 10px 20px;
+  width: 25rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+  &__header{
+    margin: 0 0 10px;
+  }
+
+  &__input{
+    width: 80%;
+    padding: 10px;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    outline: none;
+    transition: border-color 0.3s;
+
+    &:focus {
+      border-color: $secondary-color;
+    }
+  }
+
+  &__dropdown{
+    position: absolute;
+    top: 80px;
+    max-height: 200px;
+    background-color: white;
+    padding-left: 0;
+    overflow-y: scroll;
+    z-index: 2;
+    width: calc(80%);
+  }
+
+  .list-item{
+    padding: 0.5rem 1rem;
+    list-style-type: none;
+    transition: background-color 0.2s ease-in-out;
+
+
+    &:hover{
+      background-color: #f2f2f2;
+      cursor: pointer;
+    }
+  }
+}

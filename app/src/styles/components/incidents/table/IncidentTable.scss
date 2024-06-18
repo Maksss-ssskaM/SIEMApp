@@ -1,0 +1,54 @@
+@import '../../../variables';
+
+.incidents-table {
+  position: relative;
+  border-collapse: collapse;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  border-radius: 8px;
+  overflow: hidden;
+  table-layout: fixed;
+
+  &__message {
+    color: #666;
+  }
+
+  thead {
+    th {
+      background-color: $primary-color;
+      color: white;
+      padding: 10px;
+      text-align: left;
+      font-size: 16px;
+
+      &:nth-child(1) { width: 30%; }
+      &:nth-child(2) { width: 10%; }
+      &:nth-child(3) { width: 20%; }
+      &:nth-child(4) { width: 15%; }
+      &:nth-child(5) { width: 10%; }
+      &:nth-child(6) { width: 15%; }
+    }
+  }
+
+  tbody {
+    tr {
+      cursor: pointer;
+      background-color: white;
+      transition: background-color 0.2s ease-in-out;
+
+      &:hover {
+        background-color: #f2f2f2;
+      }
+    }
+
+    td {
+      padding: 15px;
+      border-bottom: 1px solid #ddd;
+      text-align: left;
+      font-size: 16px;
+
+      &:last-child {
+        text-align: center;
+      }
+    }
+  }
+}

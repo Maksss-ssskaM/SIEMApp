@@ -1,0 +1,36 @@
+@charset "UTF-8";
+.filter-container {
+  position: relative;
+  cursor: pointer;
+}
+.filter-container svg {
+  margin-left: 5px;
+  padding-top: 5px;
+}
+
+.filter-dropdown {
+  position: absolute;
+  color: black;
+  width: max-content;
+  border-radius: 8px;
+  background-color: #f2f2f2;
+  list-style-type: none;
+  padding: 0.5rem 1rem;
+}
+.filter-dropdown__item {
+  font-weight: lighter;
+  position: relative;
+  padding-left: 1.5rem;
+}
+.filter-dropdown__item:hover, .filter-dropdown__item.active {
+  color: #9c1f70;
+}
+.filter-dropdown__item:hover::before, .filter-dropdown__item.active::before {
+  content: "–";
+  color: #9c1f70;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+/*# sourceMappingURL=DropdownFilter.css.map */

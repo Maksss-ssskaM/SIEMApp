@@ -1,0 +1,30 @@
+.events-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  max-height: 200px;
+  overflow-y: scroll;
+
+  &__item {
+    border-bottom: 1px solid #eee;
+    padding: 10px 0;
+
+    &:last-child {
+      border-bottom: none;
+    }
+
+    &-date {
+      color: #999;
+      margin-bottom: 5px;
+    }
+
+    &-description {
+      color: #333;
+      margin: 0;
+    }
+  }
+
+  &__message {
+    color: #666;
+  }
+}

@@ -1,0 +1,18 @@
+.graphs-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+
+  &__incidents-count-per-month,
+  &__incidents-ratio-by-severity {
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+
+    .recharts-sector:focus {
+      outline: none;
+    }
+  }
+}

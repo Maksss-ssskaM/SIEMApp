@@ -1,0 +1,87 @@
+@import '../../variables';
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.incident-editor {
+  position: relative;
+  display: block;
+
+  &__button-update {
+    border-radius: 10px;
+    margin-top: 5px;
+    color: darkgrey;
+    font-size: large;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background-color 0.2s ease-in-out;
+
+    &:hover svg {
+      transform-origin: center;
+      animation: rotate 2s linear infinite;
+    }
+  }
+
+  &__modal {
+    position: absolute;
+    top: 0;
+    left: 100%;
+    z-index: 2;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    padding: 10px 20px;
+
+    &-content {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+    }
+  }
+
+  &__title {
+    font-size: 20px;
+    margin: 5px 0;
+  }
+
+  &__select, &__input {
+    padding: 8px 10px;
+    width: 100%;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    background-color: white;
+    outline: none;
+    cursor: pointer;
+    transition: border-color 0.3s;
+  }
+
+  &__input:focus{
+    border-color: $secondary-color;
+  }
+
+  &__select {
+    appearance: none;
+    background-image: linear-gradient(45deg, transparent 50%, gray 50%), linear-gradient(135deg, gray 50%, transparent 50%);
+    background-position: calc(100% - 20px) center, calc(100% - 15px) center;
+    background-size: 5px 5px, 5px 5px;
+    background-repeat: no-repeat;
+  }
+
+  &__buttons {
+    display: flex;
+    gap: 10px;
+
+    &__button-save, &__button-cancel {
+      padding: 5px 10px;
+    }
+  }
+}
